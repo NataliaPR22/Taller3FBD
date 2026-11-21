@@ -13,10 +13,7 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://157.253.236.88:8087")
-DB_NAME = os.getenv("DB_NAME", "drinkadvisor")
-
-client = MongoClient(os.environ["MONGO_URI"])
+client = MongoClient(os.getenv("MONGO_URI", "mongodb://157.253.236.88:8087"))
 db = client["drinkadvisor"]
 
 
